@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Sideline — Under 12 rugby",
+      "hasCanvas": false,
+      "bodyTextLen": 3905,
+      "bodyTextHash": "7fe6b7e67bba96de749d6ea0cbd007c2d3104837a475ac9bb3c08e4ada9894c1",
+      "bodyTextPrefix": "UNITED STATES · UNDER 12 Sideline A touchline card for American ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Sideline — Under 12 rugby",
+      "hasCanvas": false,
+      "bodyTextLen": 3905,
+      "bodyTextHash": "7fe6b7e67bba96de749d6ea0cbd007c2d3104837a475ac9bb3c08e4ada9894c1",
+      "bodyTextPrefix": "UNITED STATES · UNDER 12 Sideline A touchline card for American ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --color-cream: #f3efe6;
+  --color-paper: #fffdf8;
+  --color-ink: #14261c;
+  --color-muted: #3e5147;
+  --color-pitch: #1b6b43;
+  --color-flag: #c98408;
+  --color-line: #e3d9c8;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-flag);
+    outline-offset: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+.touchline {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 18px,
+    color-mix(in srgb, var(--color-cream) 14%, transparent) 18px,
+    color-mix(in srgb, var(--color-cream) 14%, transparent) 19px
+  );
+}
+
+.pocket-print {
+  display: none;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .pocket-print {
+    display: block !important;
+  }
+
+  body {
+    background: white;
+  }
+}
+
+@page {
+  margin: 12mm;
+}
