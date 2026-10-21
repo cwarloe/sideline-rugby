@@ -21,6 +21,11 @@ import { renderInstallPage } from "./grok-pwa-plugin.mjs";
 
 const TEMPLATE_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
+// The shared helpers read the share-card name and image from process.cwd()
+// (src/lib/og/site.json, public/og.jpg). Run these tests from an empty
+// directory so the app's own branding doesn't leak into the template fixtures.
+process.chdir(mkdtempSync(join(tmpdir(), "grok-pwa-test-")));
+
 test("injects before </head>", () => {
   const out = injectGrokPwaHead("<html><head><title>x</title></head><body></body></html>");
   assert.match(out, /rel="manifest"/);
