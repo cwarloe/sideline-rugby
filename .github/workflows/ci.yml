@@ -20,3 +20,9 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm test
+      # Production build (vite + nitro). Catches bundling errors that
+      # typecheck and lint miss. No DATABASE_URL is set here, so the
+      # db:migrate step at the end of `npm run build` skips by design.
+      - run: npm run build
+        env:
+          DATABASE_URL: ""
