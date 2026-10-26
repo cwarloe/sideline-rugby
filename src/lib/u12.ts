@@ -64,8 +64,7 @@ export const laws: Record<Mode, Law[]> = {
     {
       title: "Pass it back",
       shout: "Sideways or backwards. Forward pass or knock-on: their scrum.",
-      detail:
-        "The scrum that follows is uncontested. You are restarting, not shoving.",
+      detail: "The scrum that follows is uncontested. You are restarting, not shoving.",
     },
     {
       title: "Scrum does not shove",
@@ -239,7 +238,11 @@ export const questions: Record<Mode, Question[]> = {
     },
     {
       prompt: "What is on the score sheet?",
-      choices: ["Tries only", "A try and a conversion kick", "Tries, penalty goals, and drop goals"],
+      choices: [
+        "Tries only",
+        "A try and a conversion kick",
+        "Tries, penalty goals, and drop goals",
+      ],
       answer: 1,
       why: "Washington lists a try and a conversion kick. Drop goals are not the youth card.",
     },
@@ -277,7 +280,11 @@ export const questions: Record<Mode, Question[]> = {
     },
     {
       prompt: "Once a ruck has formed, hands on the ball are…",
-      choices: ["How you jackal", "Illegal. Stay on your feet and enter through the gate", "Fine if you arrived first"],
+      choices: [
+        "How you jackal",
+        "Illegal. Stay on your feet and enter through the gate",
+        "Fine if you arrived first",
+      ],
       answer: 1,
       why: "Hands in the ruck are a penalty. Arrive from behind, on your feet.",
     },

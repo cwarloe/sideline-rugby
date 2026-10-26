@@ -1,0 +1,12 @@
+# Generated or vendored; not hand-edited here.
+package-lock.json
+src/routeTree.gen.ts
+.grok/
+public/__grok/
+screenshots/
+AGENTS.md
+# Build output
+dist/
+.output/
+.vercel/
+.nitro/

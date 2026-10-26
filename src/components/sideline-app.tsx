@@ -60,8 +60,8 @@ export function SidelineApp({ mode }: { mode: Mode }) {
                   Sideline
                 </h1>
                 <p className="mt-3 max-w-md text-sm text-cream/80">
-                  A touchline card for American age-grade rugby. The national tackle law is the
-                  same everywhere. The size of the game is not.
+                  A touchline card for American age-grade rugby. The national tackle law is the same
+                  everywhere. The size of the game is not.
                 </p>
               </div>
               <button
@@ -89,7 +89,9 @@ export function SidelineApp({ mode }: { mode: Mode }) {
                     }
                   >
                     <span className="block text-sm font-semibold">{modeMeta[id].label}</span>
-                    <span className={"mt-0.5 block text-xs " + (on ? "text-muted" : "text-cream/70")}>
+                    <span
+                      className={"mt-0.5 block text-xs " + (on ? "text-muted" : "text-cream/70")}
+                    >
                       {modeMeta[id].short}
                     </span>
                   </button>
@@ -121,7 +123,9 @@ export function SidelineApp({ mode }: { mode: Mode }) {
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {facts[mode].map((fact) => (
                 <div key={fact.k} className="rounded-2xl border border-line bg-paper px-3 py-3">
-                  <p className="text-xs font-semibold tracking-wide text-muted uppercase">{fact.k}</p>
+                  <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+                    {fact.k}
+                  </p>
                   <p className="font-display text-3xl leading-none text-ink">{fact.v}</p>
                   <p className="mt-1 text-xs text-muted">{fact.d}</p>
                 </div>
@@ -219,7 +223,9 @@ export function SidelineApp({ mode }: { mode: Mode }) {
           <Dialog.Overlay className="no-print fixed inset-0 z-40 bg-ink/70" />
           <Dialog.Content className="no-print fixed inset-x-0 bottom-0 z-50 max-h-[92vh] overflow-y-auto rounded-t-2xl bg-cream p-4 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:w-full sm:max-w-lg sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-2xl">
             <div className="mb-3 flex items-center justify-between gap-3">
-              <Dialog.Title className="font-display text-2xl text-ink italic">Pocket card</Dialog.Title>
+              <Dialog.Title className="font-display text-2xl text-ink italic">
+                Pocket card
+              </Dialog.Title>
               <Dialog.Close className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-ink">
                 <X className="size-5" aria-hidden />
                 <span className="sr-only">Close</span>
@@ -253,7 +259,9 @@ function Quiz({ items }: { items: Question[] }) {
       <h2 className="font-display text-3xl text-ink italic">Check yourself</h2>
       {done ? (
         <div className="rounded-2xl bg-ink px-4 py-5 text-cream">
-          <p className="font-display text-4xl italic">{score}/{items.length}</p>
+          <p className="font-display text-4xl italic">
+            {score}/{items.length}
+          </p>
           <p className="mt-2 text-sm text-cream/80">Enough to survive the first whistle.</p>
           <button
             type="button"
@@ -290,7 +298,9 @@ function Quiz({ items }: { items: Question[] }) {
                     setPicked(index);
                     if (index === current.answer) setScore((value) => value + 1);
                   }}
-                  className={"min-h-11 rounded-2xl border px-3 py-2 text-left text-sm font-medium " + tone}
+                  className={
+                    "min-h-11 rounded-2xl border px-3 py-2 text-left text-sm font-medium " + tone
+                  }
                 >
                   {choice}
                 </button>
@@ -325,15 +335,7 @@ function Quiz({ items }: { items: Question[] }) {
   );
 }
 
-function PocketCard({
-  mode,
-  href,
-  note,
-}: {
-  mode: Mode;
-  href: string | null;
-  note: string;
-}) {
+function PocketCard({ mode, href, note }: { mode: Mode; href: string | null; note: string }) {
   const meta = modeMeta[mode];
   return (
     <article className="rounded-2xl border border-line bg-paper p-4 text-ink">
