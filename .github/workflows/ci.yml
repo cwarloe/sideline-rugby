@@ -19,6 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm run lint
+      - run: npm run format:check
       - run: npm test
       # Production build (vite + nitro). Catches bundling errors that
       # typecheck and lint miss. No DATABASE_URL is set here, so the
